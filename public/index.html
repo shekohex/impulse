@@ -2,25 +2,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Impulse</title>
+    <title>Impulse Build</title>
     <!-- One Signal Setup -->
-    <script
-      src="https://cdn.onesignal.com/sdks/OneSignalSDK.js"
-      async=""
-    ></script>
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
     <script>
       window.OneSignal = window.OneSignal || [];
       OneSignal.push(() => {
         OneSignal.init({
           appId: 'bb61f28f-3261-471b-897f-94ac0127add6',
+          requiresUserPrivacyConsent: false,
+          autoResubscribe: true,
+          autoRegister: true,
           notifyButton: {
             enable: true,
+            text: 'Enable Push Notifications',
           },
         });
       });
     </script>
   </head>
   <body>
-    <h1>Hello World!</h1>
+    <h1>
+      After Subscribing to Push Notifications you should see your User ID:
+    </h1>
+    <br />
+    <h3 id="user_id">Featching User ID ...</h3>
+    <br />
+    <h5>
+      Copy User ID above and add it to your <code>IMPULSE_USER_ID</code> env
+    </h5>
+    <script>
+      const USER_ID_NODE = document.getElementById('user_id');
+      OneSignal.push(() => {
+        OneSignal.getUserId((userId) => {
+          USER_ID_NODE.textContent = userId;
+          console.log('OneSignal User ID:', userId);
+        });
+      });
+    </script>
   </body>
 </html>
