@@ -3,6 +3,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Impulse</title>
+    <!-- One Signal Setup -->
+    <script
+      src="https://cdn.onesignal.com/sdks/OneSignalSDK.js"
+      async=""
+    ></script>
+    <script>
+      window.OneSignal = window.OneSignal || [];
+      OneSignal.push(() => {
+        OneSignal.init({
+          appId: 'bb61f28f-3261-471b-897f-94ac0127add6',
+          notifyButton: {
+            enable: true,
+          },
+        });
+      });
+    </script>
   </head>
   <body>
     <h1>Hello World!</h1>
