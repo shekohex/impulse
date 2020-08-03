@@ -39,6 +39,13 @@
           console.log('OneSignal User ID:', userId);
         });
       });
+      // to refresh the page after user subscription change
+      OneSignal.push(() => {
+        OneSignal.on('subscriptionChange', (isSubscribed) => {
+          console.log("The user's subscription state is now:", isSubscribed);
+          location.reload();
+        });
+      });
     </script>
   </body>
 </html>
