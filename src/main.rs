@@ -1,3 +1,5 @@
+#![deny(unsafe_code)]
+
 use anyhow::{anyhow, Result};
 use argh::FromArgs;
 use std::{env, process};
