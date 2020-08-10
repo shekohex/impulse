@@ -29,7 +29,7 @@ $ cargo install
 
 ## Usage
 
-1. Goto (Impulse Website)[https://impulse-build.netlify.app/] and enable push notifications (the small bill in the bottom right corner).
+1. Goto [Impulse Website](https://impulse-build.netlify.app/) and enable push notifications (the small bill in the bottom right corner).
 2. Copy your UserID and set `IMPULSE_USER_IDS` env to the UserID value.
 
 ```bash
