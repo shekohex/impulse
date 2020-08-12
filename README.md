@@ -1,11 +1,25 @@
 <h1 align="center">Impulse 🔔</h1>
 <div align="center">
   <strong>
-    A CLI Tool to Send Push Notifications after build command finish.
+    A CLI Tool to Send a Push Notifications when a command completes.
   </strong>
 </div>
 
 <br />
+
+<div align="center">
+  <a href="https://travis-ci.com/github/shekohex/impulse">
+    <img src="https://travis-ci.com/shekohex/impulse.svg?branch=master"
+      alt="Travis CI" />
+  </a>
+   <a href="https://ci.appveyor.com/project/shekohex/impulse">
+    <img src="https://ci.appveyor.com/api/projects/status/kpaeadhhoscqbcdw/branch/master?svg=true"
+      alt="AppVeyor" />
+  </a>
+  <a href="https://github.com/shekohex/impulse/releases">
+    <img alt="GitHub All Releases" src="https://img.shields.io/github/downloads/shekohex/impulse/total">
+  </a>
+</div>
 
 ## About
 
