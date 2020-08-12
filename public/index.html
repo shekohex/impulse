@@ -13,6 +13,8 @@
           requiresUserPrivacyConsent: false,
           autoResubscribe: true,
           autoRegister: true,
+          safari_web_id:
+            'web.onesignal.auto.5ccade99-0f35-4775-9ae0-5e2c3bfd110b',
           notifyButton: {
             enable: true,
             text: 'Enable Push Notifications',
@@ -30,7 +32,11 @@
         padding: 0 10px;
         font-family: sans-serif;
       }
-      h1,h2,h3 { line-height:1.2 }
+      h1,
+      h2,
+      h3 {
+        line-height: 1.2;
+      }
       .user-id {
         font-size: 2em;
       }
@@ -41,16 +47,20 @@
       Impulse
     </h1>
 
-    <p>Impulse is a tool that sends a push notfication to your browser when a command completes.
-      For more information visit: <a href="https://github.com/shekohex/impulse">https://github.com/shekohex/impulse</a>.
+    <p>
+      Impulse is a tool that sends a push notfication to your browser when a
+      command completes. For more information visit:
+      <a href="https://github.com/shekohex/impulse"
+        >https://github.com/shekohex/impulse</a
+      >.
     </p>
 
     <h2>Your Subscription</h2>
 
     <p>
       After subscribing to Push Notifications you should see your User ID below.
-      Copy it and set the <code>IMPULSE_USER_IDS</code> environment variable with
-      the value.
+      Copy it and set the <code>IMPULSE_USER_IDS</code> environment variable
+      with the value.
     </p>
 
     <div class="user-id">
