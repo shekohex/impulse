@@ -20,17 +20,44 @@
         });
       });
     </script>
+    <style type="text/css">
+      body {
+        margin: 40px auto;
+        max-width: 650px;
+        line-height: 1.6;
+        font-size: 18px;
+        color: #444;
+        padding: 0 10px;
+        font-family: sans-serif;
+      }
+      h1,h2,h3 { line-height:1.2 }
+      .user-id {
+        font-size: 2em;
+      }
+    </style>
   </head>
   <body>
     <h1>
-      After Subscribing to Push Notifications you should see your User ID:
+      Impulse
     </h1>
-    <br />
-    <h3 id="user_id">Fetching User ID ...</h3>
-    <br />
-    <h5>
-      Copy User ID above and add it to your <code>IMPULSE_USER_IDS</code> env
-    </h5>
+
+    <p>Impulse is a tool that sends a push notfication to your browser when a command completes.
+      For more information visit: <a href="https://github.com/shekohex/impulse">https://github.com/shekohex/impulse</a>.
+    </p>
+
+    <h2>Your Subscription</h2>
+
+    <p>
+      After subscribing to Push Notifications you should see your User ID below.
+      Copy it and set the <code>IMPULSE_USER_IDS</code> environment variable with
+      the value.
+    </p>
+
+    <div class="user-id">
+      <strong>User ID:</strong>
+      <span id="user_id">Fetching User ID&hellip;</span>
+    </div>
+
     <script>
       const USER_ID_NODE = document.getElementById('user_id');
       OneSignal.push(() => {
